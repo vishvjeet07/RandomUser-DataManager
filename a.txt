@@ -1,3 +1,0 @@
-1. this api returns the object so have to find data from that from array
-2. string that data into database
-3. reading data from database that returns th whole data as array so hava to filter the data that we lastly added. can do it with different ways i did by finding length of array and accesing last object.
