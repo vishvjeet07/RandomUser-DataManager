@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+         /* Reset default styles */
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #1c1c1c;
+            width: 320px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            text-align: center;
+            animation: cardAnimation 0.6s ease-out;
+        }
+
+        /* Animation for card appearance */
+        @keyframes cardAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Profile Image Styles */
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 3px solid #333;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Card Content */
+        .card-content {
+            padding: 20px;
+            background-color: #2a2a2a;
+            border-radius: 0 0 15px 15px;
+        }
+
+        /* Name Animation */
+        .card-content h3 {
+            font-size: 28px;
+            color: #f1f1f1;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.3s forwards;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .card-content h3:hover {
+            color: #6200ea; /* Change color on hover */
+            transform: scale(1.1); /* Slight scale effect */
+        }
+
+        /* Animation for text fade-in */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card-content p {
+            font-size: 16px;
+            color: #bbb;
+            margin-bottom: 8px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.6s forwards;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .card-content p:hover {
+            color: #ffffff;
+            text-decoration: none;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.9s forwards;
+            transition: color 0.5s ease;
+        }
+
+        .card-content .info {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #777;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 1.2s forwards;
+        }
+
+        .card-content .info span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Profile Picture -->
+        <img src="<%= imgUrl %>" alt="Profile Picture">
+
+        <!-- Card Content -->
+        <div class="card-content">
+            <h3><%= name %></h3>
+            <p>Age: <%= age%></p>
+            <p>City: <%= city%></p>
+            <p>Email: <%= email %></a></p>
+        </div>
+    </div>
+
+</body>
+</html>
